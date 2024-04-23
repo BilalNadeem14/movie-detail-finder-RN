@@ -1,3 +1,52 @@
+// {
+//   "extends": "@react-native/typescript-config/tsconfig.json"
+// }
+
+// {
+// //"extends": "@tsconfig/react-native/tsconfig.json",
+// "extends": "@react-native/typescript-config/tsconfig.json",
+
+//   "compilerOptions": {
+//     "jsx": "react",
+//     "baseUrl": "./src",
+//     "paths": {
+//       "tests": ["tests/*"],
+//       "@store/*": ["store/*"],
+//       "@hooks/*": ["hooks/*"],
+//       "@commonSlices/*": ["commonSlices/*"],
+//       "@features/*": ["features/*"],
+//       "@components/*": ["components/*"],
+//       "@navigation/*": ["navigation/*"],
+//       "@utils/*": ["utils/*"]
+//     },
+//     "skipLibCheck": true
+//   },
+//   "exclude": ["node_modules"],
+//   "include": ["src/**/*"]
+// }
+
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": "src/.",
+    "paths": {
+      "tests": ["tests/*"],
+      "@assets": ["assets/index.ts"],
+      "@assets/*": ["assets/*"],
+      "@store/*": ["store/*"],
+      "@services/*": ["services/*"],
+      "@hooks/*": ["hooks/*"],
+      "@commonSlices/*": ["commonSlices/*"],
+      "@features/*": ["features/*"],
+      "@components/*": ["components/*"],
+      "@navigation/*": ["navigation/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
