@@ -1,30 +1,3 @@
-// {
-//   "extends": "@react-native/typescript-config/tsconfig.json"
-// }
-
-// {
-// //"extends": "@tsconfig/react-native/tsconfig.json",
-// "extends": "@react-native/typescript-config/tsconfig.json",
-
-//   "compilerOptions": {
-//     "jsx": "react",
-//     "baseUrl": "./src",
-//     "paths": {
-//       "tests": ["tests/*"],
-//       "@store/*": ["store/*"],
-//       "@hooks/*": ["hooks/*"],
-//       "@commonSlices/*": ["commonSlices/*"],
-//       "@features/*": ["features/*"],
-//       "@components/*": ["components/*"],
-//       "@navigation/*": ["navigation/*"],
-//       "@utils/*": ["utils/*"]
-//     },
-//     "skipLibCheck": true
-//   },
-//   "exclude": ["node_modules"],
-//   "include": ["src/**/*"]
-// }
-
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {

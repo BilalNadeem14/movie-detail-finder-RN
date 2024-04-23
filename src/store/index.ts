@@ -2,16 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import homeSlice from '../features/home/homeSlice';
 import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import {movieApi} from '../services/api';
-import {
-  FLUSH,
-  PAUSE,
-  PERSIST,
-  persistReducer,
-  persistStore,
-  PURGE,
-  REGISTER,
-  REHYDRATE,
-} from 'redux-persist';
+import {persistReducer, persistStore} from 'redux-persist';
 
 const rootReducer = combineReducers({
   home: homeSlice,
@@ -32,22 +23,7 @@ export const store = configureStore({
     getDefaultMiddleware({
       immutableCheck: false,
       serializableCheck: false,
-      // serializableCheck: {
-      //   ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      //   // isSerializable: () => false
-      // },
     }).concat(movieApi.middleware),
-  // .concat(logger),
-  // .prepend(
-  //   // correctly typed middlewares can just be used
-  //   additionalMiddleware,
-  //   // you can also type middlewares manually
-  //   untypedMiddleware as Middleware<
-  //     (action: Action<'specialAction'>) => number,
-  //     RootState
-  //   >
-  // )
-  // prepend and concat calls can be chained
 });
 
 export const persistor = persistStore(store);

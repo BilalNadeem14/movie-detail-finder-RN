@@ -18,11 +18,8 @@ const baseQueryWithReauth: BaseQueryFn<
   FetchBaseQueryError
 > = async (args, api, extraOptions) => {
   let newArgs = '/?apikey=817cec18';
-  console.log('args + newArgs', args, newArgs, newArgs + args);
   newArgs += args;
-  console.log('baseQueryWithReauth called: ', newArgs, api, extraOptions);
   let result = await baseQuery(newArgs, api, extraOptions);
-  console.log('baseQueryWithReauth result: ', api, newArgs, result);
 
   return result;
 };
