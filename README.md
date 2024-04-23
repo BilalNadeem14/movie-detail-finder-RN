@@ -2,7 +2,12 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+
+Run:
+
+yarn
+npx pod-install
 
 ## Step 1: Start the Metro Server
 
@@ -34,6 +39,8 @@ yarn android
 
 ### For iOS
 
+Method#01
+
 ```bash
 # using npm
 npm run ios
@@ -41,6 +48,11 @@ npm run ios
 # OR using Yarn
 yarn ios
 ```
+
+Method#02
+
+go to ios folder, double click on Assessment.xcworkspace to open xcode,
+click on pay icon to run the app
 
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
